@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsene's poltfolio </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2757b5871b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mob-header">
+        <div class="d-flex">
+            <div class="navbar-brand">
+               
+            </div>
+        <button class="toggler-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </button>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="portfolio logo.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <header class="header-left" id="navbar-collapse-toggle">
+        <div class="top">
+            <a href="index.html"> Fifi & Fils </a>
+        </div>
+        
+        <ul class="nav nav-menu">
+            <li>
+                <a href="index.html" class="nav-link active" data-toggle="tooltip" title="Home">
+                    <i class="fa-solid fa-house-user"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html" class="nav-link" data-toggle="tooltip" title="About Me">
+                    <i class="fa-solid fa-address-card"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="projects.html" class="nav-link" data-toggle="tooltip" title="Projects">
+                    <i class="fa-solid fa-laptop-file"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="nav-link" data-toggle="tooltip" title="Contact Us">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+        </ul>
+
+
+
+    </header>
+
+<main>
+    <section class="banner">
+        <div class="top-fixed d-flex">
+
+        </div>
+        <div class="container">
+            <div class="row full-screen align-items-center"> 
+                <div class="col-lg-7">
+                    <div class="box">
+                        <h5>Hello, My name is </h5>
+                        <h1>Arsene Mugisha Yvan</h1>
+                        <p class="read">I am a web develloper/ web designer</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="me" style="background-image: url(me.jpg) ;">
+            
+        </div>
+    </section>
+</main>
+<div class="footer">
+    <div class="smap">
+        <ul>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Us</a>
+        </ul>
+        
+    </div>
+    <div class="cop">
+        <p>copyrights Fifi & Fils July 2023</p>
+    </div>
+</div>
+
+
+    
+    
+       
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+    <script>
+
+            $(".toggler-menu").on('click', function(){
+                $('.header-left').toggleClass('menu-open');
+                $('.bar1').toggleClass('menu-open');
+                $('.bar2').toggleClass('menu-open');
+                $('.bar3').toggleClass('menu-open');
+                });
+    </script>
+</body>
+</html>

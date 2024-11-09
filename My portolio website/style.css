@@ -1,0 +1,604 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    outline: none;
+}
+
+html{
+ overflow-x: hidden; 
+}
+
+.navbar-brand a img{
+    width: 250px;
+    height: auto;
+}
+
+body{
+    background: skyblue;
+    min-height: 100vh;
+    /* background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(bg.jpg) center no-repeat;  */
+    background-size: cover;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    color: royalblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color:darkblue;
+    text-decoration: none;
+}
+
+.header-left{
+    width: 80px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    background-color: #4169e1;
+    border-right: 1px solid black;
+    z-index: 999;
+}
+
+.header-left .top a{
+    background:slateblue;
+    color: white;
+    font-weight: 100px;
+    text-decoration: none;
+    font-size: 12px;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.header-left .nav-menu{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.nav-menu li{
+    width: 100%;
+}
+
+.nav-menu  li + li{
+    border-top: 1px solid rgba(255,0,0, 0.2) ;
+}
+
+.nav-link{
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    transition: ease all 0.35s;
+    text-align: center;
+}
+
+.nav-link i {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+button.toggler-menu{
+    background: none; 
+    border: none;
+}
+
+.mob-header{
+    padding: 15px;
+    display: none;
+    position: inherit;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+
+.mob-header .logo{
+  width: 200px;
+  height: 200px;
+}
+
+
+.toggler-menu{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 15px;
+    background:slateblue;
+    border: none;
+    margin-left: auto;
+}
+
+.toggler-menu span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    margin: 0;
+    background:#fff;
+    color: white;
+    box-shadow: 0px -8px 0 0 currentColor, 0px 8px 0 0 currentColor;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-open.bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .menu-open.bar2 {opacity: 0;}
+  
+  .menu-open.bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+@media(max-width: 768px){
+    .mob-header{
+        display: block;
+    }
+
+    .header-left{
+        transition: ease all 0.35s;
+        left: -200px;
+        z-index: 222;
+    }
+
+    .header-left.menu-open{
+        left: 0;
+    }
+}
+
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after{
+    content:"";
+    position: absolute;
+    right: -20vh;
+    bottom: -20vh;
+    width: 120vh;
+    height: 120vh;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.top-fixed{
+    position: absolute;
+    padding: 30px 50px 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.banner .full-screen{
+    min-height: 100vh;
+}
+
+.banner .me{
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.box{
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
+.box h6{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.box h1{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.box .read{
+    color: darkblue;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+@media(max-width: 768px){
+    .banner .top-fixed{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .banner .box h5{
+        font-size: 16px;
+        margin: 0 0 10px;
+    } 
+}
+
+@media(max-width: 768px){
+    .banner .box h1{
+        font-size: 25px;
+    } 
+}
+
+@media(max-width: 768px){
+    .banner .box .read {
+        font-size: 14px;
+        margin-bottom: 15px;
+    } 
+}
+
+@media(max-width:768px){
+  .footer{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media(max-width:768px){
+  body{
+    position: relative;
+    min-height: 100px;
+  }
+}
+
+@media(max-width: 991px){
+    .banner .me{
+        opacity: 0.4;
+        width: 80vw;
+    }
+}
+
+.about-me img{
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.about-me .info{
+    text-align: center;
+    padding-top: 20px;
+    color: darkblue;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.about-me .info h3{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.about-me .info p{
+    margin: 0;
+    font-size: 16px;
+    color: slateblue;
+}
+
+.info-list ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info-list li{
+    padding: 4px 0;
+}
+
+.info-list label{
+    margin: 0;
+    padding-right: 10px;
+    font-weight: 400;
+}
+
+.item{
+    width: 600px;
+    height:600px;
+    margin: 0 auto;
+}
+
+.skill {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+/* styles of the modal in the projects page */
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+
+    .footer{
+      position: absolute;
+      bottom: 0;
+    }
+
+  }
+
+  @media(max-width:768px){
+    body{
+      position: relative;
+      min-height: 100px;
+    }
+  }
+
+  .contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+  }
+
+  .contact .content{
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .contact .content h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: green;
+  }
+
+  .contact .content p{
+    font-weight: 300;
+    color: black;
+  }
+
+  .contacts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .contacts .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts .contact-info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+  }
+
+  .contacts .contact-info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+
+  .contacts .contact-info .box .text{
+    display: flex;
+    margin-left: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    flex-direction: column;
+  }
+
+  .contacts .contact-info .box .text h3{
+    font-weight: 500;
+    color:black;
+  }
+
+  .contactForm{
+    width: 40%;
+    padding: 40px;
+    background-color: #f1f1f1;
+  }
+
+  .contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .contactForm .inputBox input, .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+  }
+
+  .contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666
+  }
+
+  .contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span,  .contactForm .inputBox input:focus ~ textarea,  .contactForm .inputBox input:valid ~ textarea{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-10px);
+  }
+
+  .contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background-color:steelblue;
+    color: black;
+    border: none;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  @media(max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .contacts{
+        flex-direction: column;
+    }
+    .contacts .contact-info {
+        margin-bottom: 40px;
+    }
+    .contacts .contact-info, .contactForm {
+        width: 100%;
+    }
+  }
+
+  .footer{
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+    position:absolute;
+    bottom:1px;
+  }
+  
+   .smap ul {
+    display: flex;
+    margin: 0 auto; 
+    align-items: flex-start; 
+    text-decoration: none;
+    justify-content: space-evenly;
+  }
+
+  .cop p{
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+  }
